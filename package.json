@@ -6,6 +6,7 @@
     ]
   },
   "scripts": {
+    "preinstall": "npm i -g uglifyjs",
     "build": "NODE_ENV=production browserify main.js | uglifyjs -cm > public/bundle.js",
     "start": "ecstatic -p 8000 public",
     "watch": "watchify main.js -o public/bundle.js -dv"
